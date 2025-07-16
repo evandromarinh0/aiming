@@ -2,6 +2,14 @@
   "expo": {
     "name": "aiming",
     "slug": "aiming",
-    "version": "1.0.0"
+    "scheme": "aiming",
+    "version": "1.0.0",
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "android": {
+      "package": "com.jaywalker313.aiming"
+    }
   }
 }

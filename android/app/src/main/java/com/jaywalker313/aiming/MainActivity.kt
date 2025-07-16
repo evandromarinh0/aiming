@@ -1,4 +1,4 @@
-package com.aiming
+package com.jaywalker313.aiming
 
 import android.os.Build
 import android.os.Bundle
