@@ -1,10 +1,12 @@
 import { colors } from "@/theme";
 import { Container, Label, SummaryWrapper, Total } from "./styles";
 import { Separator } from "../Separator";
-import { Summary } from "../Summary";
+import { Summary, SummaryProps } from "../Summary";
 
 export type HeaderProps = {
   total: string;
+  input: SummaryProps;
+  output: SummaryProps;
 }
 
 type Props = {
@@ -21,9 +23,9 @@ export function Header(props: Props){
 
 
       <SummaryWrapper>
-        <Summary data={{ label: "Entradas", value: "R$ 6,184.90" }} icon={{ name: "arrow-upward", color: colors.green[500] }} />
+        <Summary data={props.data.input} icon={{ name: "arrow-upward", color: colors.green[500] }} />
 
-        <Summary data={{ label: "Saídas", value: "-R$ 883.65" }} icon={{ name: "arrow-downward", color: colors.red[400] }} endFlexed />
+        <Summary data={props.data.output} icon={{ name: "arrow-downward", color: colors.red[400] }} endFlexed />
       </SummaryWrapper>
     </Container>
   );

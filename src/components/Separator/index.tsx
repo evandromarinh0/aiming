@@ -1,7 +1,11 @@
 import { Container } from "./styles";
 
-export function Separator(){
+interface SeparatorProps {
+  color?: string;
+}
+
+export function Separator(props: SeparatorProps){
   return(
-    <Container />
+    <Container color={props.color} />
   )
 }
